@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    transition: 1.5s;
 }
 
 body{
@@ -19,6 +20,7 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    font-family: 'Rubix' sans-serif;
   }
   
 
@@ -35,28 +37,261 @@ main {
   }
   
 
-.phone {
-    width: 260px;
-    height: 500px;
+  .phone {
+    width: 340px;
+    height: 620px;
     border-radius: 30px;
+    left: 10rem;
     background: white;
     box-shadow: 0 20px 30px rgba(0,0,0,0.1);
     padding: 12px;
     position: relative;
     z-index: 10;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
+  }
   
-.phone-inner {
+  .phone-inner {
     background: hsl(270, 20%, 96%);
     border-radius: 20px;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    font-family: 'Rubik', sans-serif;
-}
-
+    position: relative;
+  }
+  
+  /* ---------- HEADER ---------- */
+  
+  .phone-header {
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 10px;
+    color: white;
+    border-radius: 20px 20px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .back-arrow {
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    margin-right: 5px;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .user-info .name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .user-info .status {
+    opacity: 0.8;
+  }
+  
+  /* ---------- MESSAGES ---------- */
+  
+  .messages {
+    font-weight: 400;
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .message.left {
+    align-self: flex-start;
+    background-color: hsl(276, 55%, 90%);
+    color: hsl(276, 55%, 20%);
+    border-bottom-left-radius: 4px;
+  }
+  
+  .message.right {
+    align-self: flex-end;
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    border-bottom-right-radius: 4px;
+  }
+  
+  /* Dog image group */
+  .images {
+    display: flex;
+    gap: 6px;
+    align-self: flex-end;
+  }
+  
+  .images img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* ---------- PRICE OPTIONS ---------- */
+  
+  .price-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  
+  .option {
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: hsl(276, 55%, 30%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  .option input[type="radio"] {
+    display: none;
+  }
+  
+  .option label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .option .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid hsl(276, 55%, 30%);
+    background-color: transparent;
+  }
 
   
+  
+  /* ---------- INPUT BAR ---------- */
+  
+  .input-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+  }
+  
+  .input-bar input {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 12px;
+    background: hsl(270, 20%, 96%);
+    outline: none;
+  }
+  
+  .send-btn {
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .send-btn svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+  }
+
+  .message.left{
+    color:hsl(264, 100%, 61%);
+  }
+  
+ /* -------- Div two --------*/
+
+ .two{
+    /* background-color: orange; */
+    z-index: 10;
+    padding: 30px;
+    width: 40%;
+    margin-left: 10rem;
+    height: 500px;
+ }
+
+ h1{
+    font-size: 4rem;
+    color: hsl(271, 36%, 24%);
+    font-weight: 700;
+ }
+
+ .intro{
+    font-size: 2rem;
+    color: grey;
+    font-weight: 400;
+ }
+
+ .send-arrow{
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(230deg);
+    margin-right: 5px;
+
+ }
+
+ /* --------- footer ---------*/
+
+ .attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    padding-top: 2rem;
+    color: hsl(264, 100%, 61%);
+}
+
+ .attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    color: hsl(293, 100%, 63%);
+}

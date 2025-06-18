@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Frontend Mentor | Chat App Illustration</title>
 </head>
 <body>
   <main>
@@ -22,48 +16,65 @@
           <div class="phone-header">
             <div class="back-arrow"></div>
             <div class="user-info">
-              <div class="avatar"> <img src="./images/avatar.jpg" alt="samuels avatar"></div>
-              <div class="name">Samuel Green</div>
-              <div class="status">Available to Walk</div>
+              <div class="avatar"><img src="./images/avatar.jpg" alt="Samuel's avatar" /></div>
+              <div class="name"><span>Samuel Green</span></div>
+              <div class="status"><span>Available to Walk</span></div>
             </div>
           </div>
-          
+
           <div class="messages">
             <div class="message left">That sounds great. I'd be happy with that.</div>
             <div class="message left">Could you send over some pictures?</div>
             <div class="message right">Here you go!</div>
             <div class="images">
-              <img src="./images/dog-image-1.jpg" alt="">
-              <img src="./images/dog-image-2.jpg" alt="">
-              <img src="./images/dog-image-3.jpg" alt="">
+              <img src="./images/dog-image-1.jpg" alt="Dog 1" />
+              <img src="./images/dog-image-2.jpg" alt="Dog 2" />
+              <img src="./images/dog-image-3.jpg" alt="Dog 3" />
             </div>
             <div class="message right">Can you make it?</div>
+            <div class="message left">She looks so happy! The time we discussed works. How long shall I take her out for?</div>
+            <div class="price-options">
+              <div class="option">
+                <input type="radio" name="duration" id="thirty" />
+                <label for="thirty">
+                  <span class="dot"></span>
+                  30 minute walk <strong>$29</strong>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" name="duration" id="hour" />
+                <label for="hour">
+                  <span class="dot"></span>
+                  1 hour walk <strong>$49</strong>
+                </label>
+              </div>
+            </div>
+            
           </div>
-      
+          
+
           <div class="input-bar">
             <input type="text" placeholder="Type a message…" />
-            <button class="send-btn"></button>
+            <button class="send-btn"> <div class="send-arrow"></div></button>
           </div>
         </div>
       </div>
     </div>
-    
-    
-   
-    <div class="two">
-      <h1 class="head"> Simple booking</h1>
-      <p class="intro"> Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.</p>
-    </div>
 
- 
+    <div class="two">
+      <h1 class="head">Simple booking</h1>
+      <p class="intro">
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.
+      </p>
+      <footer>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://www.frontendmentor.io/profile/kingskyro64"> Kingskyro</a>.
+        </div>
+      </footer>
+    </div>
   </main>
-  
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
